@@ -1,0 +1,72 @@
+site_name: 我的知识维基
+site_description: 个人技术知识库
+site_author: Your Name
+site_url: https://yourusername.github.io/my-wiki
+repo_name: yourusername/my-wiki
+repo_url: https://app4.secure.forcepoint.com/yourusername/my-wiki
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs           # 顶部标签页（这是关键！）
+    - navigation.tabs.sticky    # 顶部标签固定
+    - navigation.sections       # 侧边栏分段
+    - navigation.top            # 返回顶部按钮
+    - search.suggest            # 搜索建议
+    - search.highlight          # 搜索高亮
+    - content.code.copy         # 代码复制按钮
+    - header.autohide           # 标题自动隐藏
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到暗色模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换到亮色模式
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_name: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://app4.secure.forcepoint.com/yourusername
+  generator: false
+
+nav:
+  - 简介: index.md
+  - 算法基础:
+    - 排序算法: algorithms/sorting.md
+    - 搜索算法: algorithms/search.md
+  - 数据结构:
+    - 数组与链表: data-structures/array-linkedlist.md
+  - 工具软件:
+    - Git教程: tools/git.md
+    - Markdown语法: tools/markdown.md
+  - 杂项:
+    - 快速开始: getting-started.md
