@@ -47,9 +47,36 @@ const BLOG = {
   // UUID 重定向配置
   UUID_REDIRECT: false,
   
-  // ✅ 新增：关闭有问题的功能（放在对象内部）
-  ENABLE_SEARCH: false,  // 关闭搜索
-  ENABLE_ARCHIVE: false, // 关闭归档
+  // ✅ 修复1：明确关闭有问题的功能
+  ENABLE_SEARCH: false,
+  ENABLE_ARCHIVE: false,
+  
+  // ✅ 修复2：添加所有可能缺失的配置（设默认值避免undefined）
+  CUSTOM_MENU: false,
+  CAN_COPY: true,
+  LAYOUT_SIDEBAR_REVERSE: false,
+  GREETING_WORDS: '欢迎来到 Maxkore 的极客空间',
+  
+  // ✅ 修复3：邮箱加密相关（解决"解密邮箱失败"错误）
+  CONTACT_EMAIL: '',  // 设为空，不显示邮箱
+  CONTACT_GITHUB: 'Maxkore-Geek',  // 您的GitHub用户名
+  
+  // ✅ 修复4：搜索相关配置
+  ALGOLIA_APP_ID: '',
+  ALGOLIA_SEARCH_ONLY_API_KEY: '',
+  ALGOLIA_INDEX: '',
+  
+  // ✅ 修复5：评论插件配置（设为空避免错误）
+  COMMENT_VERCEL_BOT: false,
+  COMMENT_GISCUS_REPO: '',
+  COMMENT_GISCUS_REPO_ID: '',
+  COMMENT_GISCUS_CATEGORY: '',
+  COMMENT_GISCUS_CATEGORY_ID: '',
+  
+  // ✅ 修复6：统计相关配置
+  ANALYTICS_VERCEL: false,
+  ANALYTICS_BAIDU_ID: '',
+  ANALYTICS_GOOGLE_ID: '',
   
   // 其他配置
   CATEGORY_OPTIONS: [],
