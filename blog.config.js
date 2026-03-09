@@ -13,7 +13,7 @@ const BLOG = {
   AUTHOR: 'Maxkore',
   BIO: '创造君',
   
-  // 🌐 网站信息 - 更新为您的真实域名
+  // 🌐 网站信息
   LINK: 'https://maxkore.dpdns.org',
   BLOG_TITLE: 'Maxkore 的极客空间',
   BLOG_SUBTITLE: '代码 / 创意 / 无限可能',
@@ -46,6 +46,10 @@ const BLOG = {
   
   // UUID 重定向配置
   UUID_REDIRECT: false,
+  
+  // ✅ 新增：关闭有问题的功能（放在对象内部）
+  ENABLE_SEARCH: false,  // 关闭搜索
+  ENABLE_ARCHIVE: false, // 关闭归档
   
   // 其他配置
   CATEGORY_OPTIONS: [],
